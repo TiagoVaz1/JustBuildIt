@@ -20,6 +20,7 @@ https://www.tooplate.com/view/2137-barista-cafe
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #6F5425;
+  --card_color_custm:             #cfa36f;
 
   --body-font-family:             'Plus Jakarta Sans', sans-serif;
 
@@ -638,48 +639,69 @@ strong {
   color: var(--secondary-color);
 }
 
-.team-block-wrap {
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius-medium);
+/*---------------------------------------
+  TEAM SECTION              
+-----------------------------------------*/
+.team-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-color: var(--section-bg-color);
   position: relative;
+}
+
+.team-member-card {
+  background: rgba(207, 163, 111, 0.15);
+  border: 2px solid rgba(207, 163, 111, 0.3);
+  border-radius: var(--border-radius-medium);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.team-member-card:hover {
+  background: rgba(207, 163, 111, 0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team-member-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
   overflow: hidden;
-  max-height: 450px;
-  cursor: pointer;
+  border: 3px solid var(--card_color_custm);
 }
 
-.team-block-wrap:hover .team-block-image {
-  transform: scale(1.2);
-}
-
-.team-block-image-wrap {
-  width: 100%;
-}
-
-.team-block-image {
-  display: block;
-  object-fit: cover;
+.team-member-avatar img {
   width: 100%;
   height: 100%;
-  transition: all 0.3s;
+  object-fit: cover;
 }
 
-.team-block-info {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), #6F5425);
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 30px;
+.team-member-name {
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-bold);
 }
 
-.team-block-info .badge {
-  margin: auto;
-  top: 2px;
-  bottom: 0;
+.team-member-position {
+  font-size: 18px;
+  color: var(--card_color_custm);
+  font-weight: bold;
 }
 
+.team-member-bio {
+  font-size: 16px;
+  font-weight: var(--font-weight-light);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsividade para a equipa */
+@media screen and (max-width: 767px) {
+  .team-member-avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
 
 /*---------------------------------------
   OUR MENU              

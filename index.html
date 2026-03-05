@@ -69,29 +69,30 @@
         </nav>
 
         <!-- HERO SECTION -->
-<section class="hero-section">
 
-  <!-- Vídeo de fundo -->
-  <video autoplay muted loop class="hero-video">
-    <source src="vidios/mainlobbyvidio.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <!--<em class="small-text" data-en="welcome to" data-pt="Bem-vindo ao"></em>-->
+                        <h1 data-en="Just Build IT" data-pt="Just Build IT"></h1>
+                        <p class="text-white mb-4 pb-lg-2" data-en="your <em>favourite</em> company."
+                            data-pt="a <em>sua</em> companhia favorita"></p>
 
-  <!-- Quadrado escuro -->
-  <div class="hero-overlay"></div>
-
-  <!-- Conteúdo sobre o quadrado -->
-  <div class="hero-text">
-    <em>bem-vindo ao</em>
-    <h1>Just Build IT</h1>
-    <p>a sua companhia favorita</p>
-    <div class="hero-buttons">
-      <a href="#section_2" class="btn btn-primary">Nossa História</a>
-      <a href="#section_3" class="btn btn-secondary">Confira nossos preços</a>
-    </div>
-  </div>
-
-</section>
+                        <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="#section_2"
+                            data-en="Our Story" data-pt="Nossa História"></a>
+                        <a class="btn custom-btn smoothscroll me-2 mb-2" href="#section_5"><strong
+                                data-en="Check our team" data-pt="confira nossa equipa"></strong></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slides">
+                <video autoplay loop muted class="custom-video">
+                    <source src="vidios/mainlobbyvidio.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
 
         <!-- ABOUT SECTION -->
         <section class="about-section section-padding" id="section_2">
@@ -118,17 +119,19 @@
                             data-pt="Melhor companhia de gestão do país."></p>
                         <p class="text-white"
                             data-en="Our team consists of experienced and dedicated professionals, committed to delivering projects with quality, on time, and with complete transparency. At Just Build IT, we take care of every detail of your project, ensuring that each phase is planned and executed with excellence.."
-                            data-pt="Nossa equipe é formada por profissionais experientes e dedicados, comprometidos em entregar projetos com qualidade, dentro do prazo e com total transparência. Na Just Build IT, cuidamos de cada detalhe da obra, garantindo que cada etapa seja planejada e executada com excelência..">
+                            data-pt="Nossa equipe é formada por profissionais experientes e dedicados, comprometidos em entregar projetos com qualidade, dentro do prazo e com total transparência.  Just Build IT, cuidamos de cada detalhe da obra, garantindo que cada etapa seja planejada e executada com excelência..">
                         </p>
                         <a href="Build-TEAM" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
                             data-en="know our team" data-pt="Conheça a nossa equipa"></a>
                     </div>
+                </div>
 
-
+                <div class="row align-items-center">
                     <h1 class="text-white text-center mt-5 mb-4" data-en="Functionalities" data-pt="Funcionalidades">
                     </h1>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card mx-auto bg-primary text-white" style="width: 25rem;">
+                        <div class="card mx-auto text-white"
+                            style="width: 25rem; background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
@@ -139,15 +142,34 @@
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7">
-                                        <h5 class="card-title mb-0" data-en="Project Management"
-                                            data-pt="Gerir Materiais">
-                                            Gestão de Materiais
+                                    <div class="col-7" style="min-height: 150px;">
+                                        <h5 class="card-title mb-0" data-en="Works and Materials"
+                                            data-pt="Obras e Materiais">
                                         </h5>
-                                        <p class="card-text small mt-2">
-                                            Gerir todos os projetos de construção, desde a fase de planejamento até
-                                            a execução, garantindo que cada etapa seja concluída com eficiência e
-                                            qualidade.
+                                        <p class="card-text small mt-2 text-white">
+                                            <button class="btn custom-btn btn-sm mb-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#obraCollapse1"
+                                                aria-expanded="false" aria-controls="obraCollapse1">
+                                                Description<i class="bi-chevron-down"></i>
+                                            </button>
+
+                                        <div class="collapse mt-2" id="obraCollapse1">
+                                            <div class="small text-white">
+                                                <li data-pt="Consultar inventário da obra"
+                                                    data-en="Consult project inventory">Consultar inventário da obra
+                                                </li>
+                                                <li data-pt="Fazer pedido de material" data-en="Make material request">
+                                                    Fazer pedido de material</li>
+                                                <li data-pt="Ver histórico de materiais"
+                                                    data-en="View material history">Ver histórico de materiais</li>
+                                                <li data-pt="Código de obra" data-en="Project code">Código de obra</li>
+                                                <li data-pt="Criação da obra" data-en="Project creation">Criação da obra
+                                                </li>
+                                                <li data-pt="Criar nova localização da obra"
+                                                    data-en="Create new project location">Criar nova localização da obra
+                                                </li>
+                                            </div>
+                                        </div>
                                         </p>
                                     </div>
 
@@ -157,26 +179,134 @@
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card mx-auto bg-primary text-white ms-3" style="width: 25rem;">
+                        <div class="card mx-auto text-white"
+                            style="width: 25rem; background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images/svg/bricks.svg" alt="Project Management" class="img-fluid"
+                                        <img src="images\svg\user-round-cog.svg" alt="Project Management"
+                                            class="img-fluid" width="100">
+                                    </div>
+
+                                    <!-- Texto -->
+                                    <div class="col-7" style="min-height: 150px;">
+                                        <h5 class="card-title text mb-0" data-en="Account Management"
+                                            data-pt="Gestão de Contas">
+
+                                        </h5>
+                                        <p class="card-text small mt-2 text-white">
+                                            <button class="btn custom-btn btn-sm mb-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#obraCollapse2"
+                                                aria-expanded="false" aria-controls="obraCollapse1">
+                                                Description<i class="bi-chevron-down"></i>
+                                            </button>
+
+                                        <div class="collapse mt-2" id="obraCollapse2">
+                                            <div class="small text-white">
+                                                <li data-pt="Criação da conta do Gestor de Obra"
+                                                    data-en="Create project manager account">Criação da conta do Gestor
+                                                    de Obra</li>
+                                                <li data-pt="Criação da conta do encarregado"
+                                                    data-en="Create foreman account">Criação da conta do encarregado
+                                                </li>
+                                                <li data-pt="Criação da conta do engenheiro"
+                                                    data-en="Create engineer account">Criação da conta do engenheiro
+                                                </li>
+                                                <li data-pt="Criação da conta do trabalhador"
+                                                    data-en="Create worker account">Criação da conta do trabalhador</li>
+                                                <li data-pt="Criação da conta do cliente"
+                                                    data-en="Create client account">Criação da conta do cliente</li>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card mx-auto text-white"
+                            style="width: 25rem; background-color: var(--card_color_custm);">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+
+                                    <!-- Imagem -->
+                                    <div class="col-5 text-center">
+                                        <img src="images/svg/list-check-svgrepo-com.svg" alt="Project Management"
+                                            class="img-fluid" width="100">
+                                    </div>
+
+                                    <!-- Texto -->
+                                    <div class="col-6" style="min-height: 150px;">
+                                        <h5 class="card-title mb-0" data-en="Work planning"
+                                            data-pt="Planeamento de obras">
+
+                                        </h5>
+                                        <p class="card-text small mt-2 text-white">
+                                            <button class="btn custom-btn btn-sm mb-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#obraCollapse3"
+                                                aria-expanded="false" aria-controls="obraCollapse1">
+                                                Description<i class="bi-chevron-down"></i>
+                                            </button>
+
+                                        <div class="collapse mt-2" id="obraCollapse3">
+                                            <div class="small text-white">
+                                                <li data-en="Map with project locations and current status"
+                                                    data-pt="Mapa com localização das obras e estado atual"></li>
+                                                <li data-en="Project delivery calendar"
+                                                    data-pt="Calendário de entrega das obras."></li>
+                                            </div>
+                                        </div>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards de baixo -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                        <div class="card mx-auto text-white mt-1"
+                            style="width: 25rem; background-color: var(--card_color_custm);">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+
+                                    <!-- Imagem -->
+                                    <div class="col-5 text-center">
+                                        <img src="images\svg\graph-up.svg" alt="Project Management" class="img-fluid"
                                             width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7">
-                                        <h5 class="card-title mb-0" data-en="Material Management"
-                                            data-pt="Gerir Materiais">
-                                            Gestão de Projetos
+                                    <div class="col-7" style="min-height: 150px;">
+                                        <h5 class="card-title mb-0" data-en="Financing and Reporting"
+                                            data-pt="Financiamento e Relatórios">
                                         </h5>
-                                        <p class="card-text small mt-2">
-                                            Gerir todos os projetos de construção, desde a fase de planejamento até
-                                            a execução, garantindo que cada etapa seja concluída com eficiência e
-                                            qualidade.
+                                        <p class="card-text small mt-2 text-white">
+                                            <button class="btn custom-btn btn-sm mb-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#obraCollapse4"
+                                                aria-expanded="false" aria-controls="obraCollapse1">
+                                                Description<i class="bi-chevron-down"></i>
+                                            </button>
+
+                                        <div class="collapse mt-2" id="obraCollapse4">
+                                            <div class="small text-white">
+                                                <li data-pt="Fazer orçamentos rapidamente."
+                                                    data-en="Quickly create budgets.">Fazer orçamentos rapidamente.</li>
+                                                <li data-pt="Criar faturas." data-en="Create invoices.">Criar faturas.
+                                                </li>
+                                                <li data-pt="Relatórios periódicos das obras."
+                                                    data-en="Periodic project reports.">Relatórios periódicos das obras.
+                                                </li>
+                                                <li data-pt="Controlo de custos." data-en="Cost control.">Controlo de
+                                                    custos.</li>
+                                            </div>
+                                        </div>
                                         </p>
                                     </div>
 
@@ -185,27 +315,37 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-1">
-                        <div class="card mx-auto bg-primary text-white mt-1" style="width: 25rem;">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                        <div class="card mx-auto text-white mt-1"
+                            style="width: 25rem; background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images/svg/blueprint-svgrepo-com.svg" alt="Project Management"
+                                        <img src="images\svg\document-duplicate.svg" alt="Project Management"
                                             class="img-fluid" width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7">
-                                        <h5 class="card-title mb-0" data-en="Material Management"
-                                            data-pt="Gerir Materiais">
-                                            Gestão de Projetos
+                                    <div class="col-7" style="min-height: 150px;">
+                                        <h5 class="card-title mb-0" data-en="Document Conversion"
+                                            data-pt="Conversão de Documentos">
                                         </h5>
-                                        <p class="card-text small mt-2">
-                                            Gerir todos os projetos de construção, desde a fase de planejamento até
-                                            a execução, garantindo que cada etapa seja concluída com eficiência e
-                                            qualidade.
+                                        <p class="card-text small mt-2 text-white">
+                                            <button class="btn custom-btn btn-sm mb-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#obraCollapse5"
+                                                aria-expanded="false" aria-controls="obraCollapse1">
+                                                Description<i class="bi-chevron-down"></i>
+                                            </button>
+
+                                        <div class="collapse mt-2" id="obraCollapse5">
+                                            <div class="small text-white">
+                                                <li data-pt="Conversão de Word para PDF e vice-versa."
+                                                    data-en="Word to PDF conversion and vice versa.">Conversão de Word
+                                                    para PDF e vice-versa.</li>
+                                            </div>
+                                        </div>
                                         </p>
                                     </div>
 
@@ -213,32 +353,45 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- TEAM SECTION -->
-        <section class="barista-section section-padding section-bg" id="Build-team">
+        <section class="team-section section-padding" id="section_5">
             <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="text-white mb-3" data-en="Our Team" data-pt="A Nossa Equipa"></h2>
+                        <p class="text-white" data-en="Meet the talented professionals behind Just Build IT"
+                            data-pt="Conheça os profissionais talentosos por trás da Just Build IT"></p>
+                    </div>
+                </div>
+
                 <div class="row justify-content-center">
-                    <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                        <h2 class="text-white" data-en="Meet our People" data-pt="Conheça a nossa Equipe"></h2>
+                    <!-- Membro 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="team-member-card text-center">
+                            <div class="team-member-avatar">
+                                <img src="images/hard_foto.png" alt="Rodrigo Lourenço" class="img-fluid">
+                            </div>
+                            <h4 class="team-member-name mt-3 text-white" data-en="Rodrigo Lourenço"
+                                data-pt="Rodrigo Lourenço"></h4>
+                            <p class="team-member-position text-white" data-en="CEO" data-pt="CEO"></p>
+                            <p class="team-member-bio text-white" data-en="" data-pt=""></p>
+                        </div>
                     </div>
 
-                    <!-- MEMBER 1 -->
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="team-block-wrap">
-                            <div class="team-block-info d-flex flex-column">
-                                <div class="d-flex mt-auto mb-3">
-                                    <h4 class="text-white mb-0" data-en="Steve" data-pt="Steve"></h4>
-                                    <p class="badge ms-4"><em data-en="Boss" data-pt="Chefe"></em></p>
-                                </div>
-                                <p class="text-white mb-0" data-en="the big Boss." data-pt="o chefão."></p>
+                    <!-- Membro 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="team-member-card text-center">
+                            <div class="team-member-avatar">
+                                <img src="images/tiago_foto.jpg" alt="Tiago Vaz" class="img-fluid">
                             </div>
-                            <div class="team-block-image-wrap">
-                                <img src="images/hard1.webp" class="team-block-image img-fluid" alt="">
-                            </div>
+                            <h4 class="team-member-name mt-3 text-white" data-en="Tiago Vaz" data-pt="Tiago Vaz">
+                            </h4>
+                            <p class="team-member-position text-white" data-en="CEO" data-pt="CEO"></p>
+                            <p class="team-member-bio text-white" data-en="" data-pt=""></p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +404,7 @@
                 <h2 class="text-black text-center mb-4" data-en="Language" data-pt="Linguagens"></h2>
                 <div class="row justify-content-center g-4">
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/java-svgrepo-com.svg" alt="Java" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -260,7 +413,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/sql-svgrepo-com.svg" alt="MySQL" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -269,7 +422,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/javascript-16-svgrepo-com.svg" alt="JavaScript"
                                     width="120" height="120"> </div>
                             <div class="card-body">
@@ -278,7 +431,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/html5-01-svgrepo-com.svg" alt="HTML" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -287,7 +440,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/css3-01-svgrepo-com.svg" alt="CSS" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -296,7 +449,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/php-svgrepo-com.svg" alt="PHP" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -305,11 +458,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
-                            <div class="pt-3"> <img src="images/svg/node-js-svgrepo-com.svg" alt="Node.js" width="120"
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
+                            <div class="pt-3"> <img src="images/svg/xml-svgrepo-com.svg" alt="Node.js" width="120"
                                     height="120"> </div>
                             <div class="card-body">
-                                <h5 class="card-title">Node.js</h5>
+                                <h5 class="card-title">Xml</h5>
                             </div>
                         </div>
                     </div>
@@ -318,10 +471,10 @@
         </section> <!-- apps que usamos -->
         <section class="barista-section section-padding section-bg" id="section_3">
             <div class="container">
-                <h2 class="text-black text-center mb-4" data-en="Software Used" data-pt="Software utilizado"></h2>
+                <h2 class="text-black text-center mb-4" data-en="Software Used" data-pt="Software utilizados"></h2>
                 <div class="row justify-content-center g-4">
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/github-142-svgrepo-com.svg" alt="Git Hub"
                                     width="120" height="120"> </div>
                             <div class="card-body">
@@ -330,7 +483,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/git-svgrepo-com.svg" alt="Git" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -339,7 +492,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/laragon-svgrepo-com.svg" alt="Laragon" width="120"
                                     height="120"> </div>
                             <div class="card-body">
@@ -348,7 +501,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/vs-code-logo-microsoft-svgrepo-com.svg"
                                     alt="Vs Code" width="120" height="120"> </div>
                             <div class="card-body">
@@ -357,7 +510,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/android-svgrepo-com.svg" alt="Android Studio"
                                     width="120" height="120"> </div>
                             <div class="card-body">
@@ -366,7 +519,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
                             <div class="pt-3"> <img src="images/svg/DBeaver.svg" alt="DBeaver" width="120" height="120">
                             </div>
                             <div class="card-body">
@@ -376,8 +529,7 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- CONTACT SECTION -->
-
+        </section>
         <!-- CONTACT SECTION -->
         <section class="contact-section section-padding" id="section_4">
             <div class="container">
