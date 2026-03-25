@@ -98,7 +98,7 @@
             if (email === 'admin@justbuildit.com' && senha === '1234') {
                 // Simulate session storage
                 sessionStorage.setItem('user', JSON.stringify({email, role: 'admin'}));
-                window.location.href = 'AdminPainel.html';
+                window.location.href = 'adminPainel.html';
             } else {
                 mensagem.textContent = 'Email ou palavra-passe incorretos!';
                 mensagem.className = 'alert alert-danger';
