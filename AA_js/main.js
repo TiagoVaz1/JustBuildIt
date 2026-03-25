@@ -81,7 +81,7 @@
                     backgroundColor: "rgba(255, 174, 0, 0.70)"
                 },
                 {
-                    label: "OBRAS EM ESTADO DE ORCAMENTO",
+                    label: "OBRAS EM ESTADO DE ORÇAMENTO",
                     data: [12, 25, 45, 55, 65, 70, 60],
                     backgroundColor: "rgba(255, 0, 0, 0.70)"
                 }

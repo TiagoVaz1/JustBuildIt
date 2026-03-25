@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestão de Obras - Just Build IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Gestão de obras Just Build IT" name="keywords">
+    <meta content="Lista completa de todas as obras em execução" name="description">
+
+    <link href="AA__images/icon_sem_nome-3.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome & Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap & Custom CSS -->
+    <link href="AA_css/bootstrap.min.css" rel="stylesheet">
+    <link href="AA_css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Carregando...</span>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="sidebar pe-4 pb-3" role="navigation" aria-label="Navegação lateral">
+            <div class="navbar bg-secondary navbar-dark">
+                <a href="AdminPainel.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2" aria-hidden="true"></i>Just Build IT</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                            alt="Foto do perfil adminTeste" style="width:50px; height:50px;">
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">adminTeste</h6>
+                        <span class="badge bg-success">Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="AdminPainel.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"
+                            aria-hidden="true"></i>Dashboard</a>
+                    <a href="Obras_tds.html" class="nav-item nav-link active"><i class="fa fa-th me-2"
+                            aria-hidden="true"></i>Obras</a>
+                    <a href="Relatorios_todos.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"
+                            aria-hidden="true"></i>Relatórios</a>
+                    <a href="Pedidos.html" class="nav-item nav-link"><i class="fa fa-table me-2"
+                            aria-hidden="true"></i>Pedidos</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Navbar Superior -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0"
+                aria-label="Navegação superior">
+                <a href="AdminPainel.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit" aria-hidden="true"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0" aria-label="Alternar sidebar">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Pesquisar"
+                        aria-label="Pesquisar obras">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell me-lg-2" aria-hidden="true"></i>
+                            <span class="d-none d-lg-inline-flex">Notificações</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Pedido de material</h6>
+                                <small>1 min atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Novo utilizador adicionado</h6>
+                                <small>15 minutos atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Cliente adicionado à obra</h6>
+                                <small>25 minutos atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="rounded-circle me-lg-2"
+                                src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                                alt="Foto do perfil adminTeste" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">adminTeste</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">Meu Perfil</a>
+                            <a href="#" class="dropdown-item">Definições</a>
+                            <a href="index.html" class="dropdown-item">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <main role="main" class="p-4">
+                <header class="mb-4">
+                    <h1 class="h2 text-white mb-3">Gestão de Obras</h1>
+                    <p class="text-white-50 mb-4">Visualize e gerencie todas as obras da empresa</p>
+                </header>
+
+                <!-- Botões de Ação -->
+                <div class="mb-4">
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalNovaObra">
+                        <i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Nova Obra
+                    </button>
+                </div>
+
+                <!-- Filtros -->
+                <div class="row mb-4 g-3 bg-dark rounded p-3">
+                    <div class="col-md-3">
+                        <label for="filtroCampo" class="form-label text-white">Filtrar por:</label>
+                        <select id="filtroCampo" class="form-select bg-primary text-white">
+                            <option value="0">Código da Obra</option>
+                            <option value="1">Cliente</option>
+                            <option value="2">Estado</option>
+                            <option value="3">Orçamento</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="filtroTexto" class="form-label text-white">Pesquisar:</label>
+                        <input type="text" id="filtroTexto" class="form-control bg-primary text-white"
+                            placeholder="Digite para filtrar...">
+                    </div>
+                </div>
+
+                <!-- Tabela Responsiva -->
+                <div class="bg-secondary rounded overflow-hidden">
+                    <div class="bg-primary text-white p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h2 class="h4 mb-0">Obras Ativas (3)</h2>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-success fs-6">1 Ativas</span>
+                                <span class="badge bg-warning fs-6">1 Atrasadas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Orçamento</th>
+                                    <th scope="col">Início</th>
+                                    <th scope="col">Fim Previsto</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaObras">
+                                <!-- Dados populados por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Paginação 
+                <nav aria-label="Paginação de obras" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próxima</a>
+                        </li>
+                    </ul>
+                </nav>-->
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Nova Obra -->
+    <div class="modal fade" id="modalNovaObra" tabindex="-1" aria-labelledby="modalNovaObraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalNovaObraLabel">Nova Obra</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <form id="formNovaObra">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="obraCodigo" class="form-label">Código da Obra *</label>
+                                <input type="text" class="form-control" id="obraCodigo" required
+                                    pattern="[A-Z]{3}-[0-9]{4}-[0-9]{3}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="obraCliente" class="form-label">Cliente *</label>
+                                <input type="text" class="form-control" id="obraCliente" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="obraOrcamento" class="form-label">Orçamento (€) *</label>
+                                <input type="number" class="form-control" id="obraOrcamento" required min="0"
+                                    step="0.01">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="obraInicio" class="form-label">Início</label>
+                                <input type="date" class="form-control" id="obraInicio">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="obraFim" class="form-label">Fim Previsto</label>
+                                <input type="date" class="form-control" id="obraFim">
+                            </div>
+                            <div class="col-12">
+                                <label for="obraEstado" class="form-label">Estado *</label>
+                                <select class="form-select" id="obraEstado" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="planejamento">Planeamento</option>
+                                    <option value="andamento">Em Andamento</option>
+                                    <option value="atraso">Atrasada</option>
+                                    <option value="concluida">Concluída</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="obraMorada" class="form-label">Morada da Obra</label>
+                                <input type="text" class="form-control" id="obraMorada">
+                            </div>
+                            <div class="col-12">
+                                <label for="obraDescricao" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="obraDescricao" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Criar Obra</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="AA_js/main.js" defer></script>
+    <script>
+        // Remove spinner
+        window.addEventListener('load', () => document.getElementById('spinner').classList.remove('show'));
+
+        // Dados demo das obras
+        const obrasDemo = [
+            { id: 1, codigo: 'OBR-2026-001', cliente: 'João Silva', orcamento: 185000, inicio: '2026-01-15', fim: '2026-06-30', estado: 'andamento' },
+            { id: 2, codigo: 'OBR-2026-002', cliente: 'Maria Santos', orcamento: 320000, inicio: '2026-02-01', fim: '2026-09-15', estado: 'concluida' },
+            { id: 3, codigo: 'OBR-2025-014', cliente: 'Carlos Lima', orcamento: 97500, inicio: '2025-03-10', fim: '2025-07-20', estado: 'atraso' },
+        ];
+
+        let obras = [...obrasDemo];
+
+        // Renderizar tabela
+        function renderTabela() {
+            const tbody = document.getElementById('tabelaObras');
+            tbody.innerHTML = obras.map((obra, index) => `
+                <tr>
+                    <th scope="row">${(index + 1)}</th>
+                    <td><strong>${obra.codigo}</strong></td>
+                    <td>${obra.cliente}</td>
+                    <td>€${obra.orcamento.toLocaleString()}</td>
+                    <td>${obra.inicio}</td>
+                    <td>${obra.fim}</td>
+                    <td><span class="badge ${getBadgeClass(obra.estado)}">${getEstadoLabel(obra.estado)}</span></td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a href="Obras.html?id=${obra.id}" class="btn btn-sm btn-primary" aria-label="Detalhes">
+                                <i class="bi bi-eye" aria-hidden="true"></i>
+                            </a>
+                            <button class="btn btn-sm btn-warning editar" onclick="editarObra(${obra.id})" aria-label="Editar">
+                                <i class="bi bi-pencil" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger apagar" onclick="apagarObra(${obra.id})" aria-label="Eliminar">
+                                <i class="bi bi-trash" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function getBadgeClass(estado) {
+            const classes = {
+                planejamento: 'bg-info',
+                andamento: 'bg-warning',
+                atraso: 'bg-danger',
+                concluida: 'bg-success'
+            };
+            return classes[estado] || 'bg-secondary';
+        }
+
+        function getEstadoLabel(estado) {
+            const labels = {
+                planejamento: 'Planeamento',
+                andamento: 'Em Andamento',
+                atraso: 'Atrasada',
+                concluida: 'Concluída'
+            };
+            return labels[estado] || estado;
+        }
+
+        function editarObra(id) {
+            const obra = obras.find(o => o.id === id);
+            if (obra) {
+                document.getElementById('obraCodigo').value = obra.codigo;
+                // Preencher outros campos...
+                const modal = new bootstrap.Modal(document.getElementById('modalNovaObra'));
+                modal.show();
+            }
+        }
+
+        function apagarObra(id) {
+            if (confirm('Eliminar esta obra?')) {
+                obras = obras.filter(o => o.id !== id);
+                renderTabela();
+            }
+        }
+
+        // Filtros
+        document.getElementById('filtroTexto').addEventListener('input', (e) => {
+            const termo = e.target.value.toLowerCase();
+            const campo = document.getElementById('filtroCampo').value;
+            obrasFiltradas = obras.filter(obra =>
+                obra[campo === '0' ? 'codigo' : campo === '1' ? 'cliente' : 'estado'].toLowerCase().includes(termo)
+            );
+            renderTabela();
+        });
+
+        // Form Nova/Editar Obra
+        document.getElementById('formNovaObra').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Lógica de salvar obra
+            alert('Obra criada/editada com sucesso!');
+            bootstrap.Modal.getInstance(document.getElementById('modalNovaObra')).hide();
+        });
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTabela();
+        });
+    </script>
+</body>
+
+</html>

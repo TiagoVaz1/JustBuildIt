@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="utf-8">
+    <title>Relatórios - Just Build IT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Relatórios de obras Just Build IT" name="keywords">
+    <meta content="Gere relatórios detalhados das obras e equipas" name="description">
+
+    <link href="AA__images/icon_sem_nome-3.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="AA_css/bootstrap.min.css" rel="stylesheet">
+    <link href="AA_css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+
+        <!-- Spinner -->
+        <div id="spinner"
+            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div>
+        </div>
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+                <a href="AdminPainel.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2" aria-hidden="true"></i>Just Build IT</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                            alt="Foto do perfil do admin" style="width: 50px; height: 50px;">
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">adminTeste</h6>
+                        <span class="badge bg-success">Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100" role="navigation" aria-label="Navegação principal">
+                    <a href="AdminPainel.html" class="nav-item nav-link " aria-current="page">
+                        <i class="fa fa-tachometer-alt me-2" aria-hidden="true"></i>Dashboard
+                    </a>
+                    <a href="Obras_tds.html" class="nav-item nav-link">
+                        <i class="fa fa-th me-2" aria-hidden="true"></i>Obras
+                    </a>
+                    <a href="Relatorios_todos.html" class="nav-item nav-link active">
+                        <i class="fa fa-keyboard me-2" aria-hidden="true"></i>Relatórios
+                    </a>
+                    <a href="Pedidos.html" class="nav-item nav-link">
+                        <i class="fa fa-table me-2" aria-hidden="true"></i>Pedidos
+                    </a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="far fa-file-alt me-2" aria-hidden="true"></i>Utilizadores
+                        </a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signup.html" class="dropdown-item">Criar Conta</a>
+                            <a href="utilizadores_table.html" class="dropdown-item">Tabela de Utilizadores</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar superior -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0"
+                aria-label="Navegação superior">
+                <a href="AdminPainel.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit" aria-hidden="true"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0" aria-label="Toggle sidebar">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Pesquisar"
+                        aria-label="Pesquisar">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell me-lg-2" aria-hidden="true"></i>
+                            <span class="d-none d-lg-inline-flex">Notificações</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Pedido de material</h6>
+                                <small>1 min atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Novo utilizador adicionado</h6>
+                                <small>15 minutos atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Cliente adicionado à obra</h6>
+                                <small>25 minutos atrás</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="rounded-circle me-lg-2"
+                                src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                                alt="Foto do perfil adminTeste" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">adminTeste</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">Meu Perfil</a>
+                            <a href="#" class="dropdown-item">Definições</a>
+                            <a href="index.html" class="dropdown-item">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <main class="p-4 min-vh-100" role="main">
+                <header class="mb-5">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h1 class="h2 text-white mb-2">Relatórios</h1>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#modalRelatorio">
+                                <i class="bi bi-file-earmark-plus me-2"></i>Novo Relatório
+                            </button>
+                            <button class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-download me-2"></i>Modelos
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Filtros Avançados -->
+                <div class="card bg-dark border-0 mb-4 overflow-hidden">
+                    <div class="card-body p-4">
+                        <h3 class="h5 text-white mb-4">Filtros Rápidos</h3>
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <label for="filtroObra" class="form-label text-white">Obra</label>
+                                <select id="filtroObra" class="form-select">
+                                    <option>Todas as Obras</option>
+                                    <option>OBR-2026-001 - João Silva</option>
+                                    <option>OBR-2026-002 - Maria Santos</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="filtroPeriodo" class="form-label text-white">Período</label>
+                                <select id="filtroPeriodo" class="form-select">
+                                    <option>Últimos 30 dias</option>
+                                    <option>Este mês</option>
+                                    <option>Este ano</option>
+                                    <option>Data Personalizada</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="filtroTipo" class="form-label text-white">Tipo</label>
+                                <select id="filtroTipo" class="form-select">
+                                    <option>Todos</option>
+                                    <option>Financeiro</option>
+                                    <option>Progresso</option>
+                                    <option>Equipas</option>
+                                    <option>Materiais</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 d-flex align-items-end">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Relatórios Recentes -->
+                <div class="row g-4">
+                    <!-- Cards de Relatórios Recentes -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card h-100 bg-secondary border-0 shadow">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="flex-shrink-0">
+                                        <span class="badge bg-success fs-6 px-3 py-2">Financeiro</span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-1">Resumo Mensal - Jan 2026</h6>
+                                        <small class="text-muted">Gerado há 2 dias</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-light dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Ver</a></li>
+                                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                                            <li><a class="dropdown-item" href="#">Exportar PDF</a></li>
+                                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h5 class="text-white mb-1">€247.500</h5>
+                                    <small class="text-success"><i class="bi bi-arrow-up"></i> +12% vs mês
+                                        anterior</small>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 78%"></div>
+                                </div>
+                                <a href="#" class="btn btn-outline-light btn-sm w-100">Baixar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mais cards... -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Novo Relatório -->
+    <div class="modal fade" id="modalRelatorio">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Novo Relatório</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formRelatorio">
+                        <!-- Formulário completo com campos avançados -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="AA_js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('spinner').classList.remove('show');
+            initRelatoriosChart();
+        });
+
+        function gerarRelatorio() {
+            // Lógica de geração dinâmica
+            console.log('Gerando relatório com filtros atuais...');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
     <meta charset="utf-8">
     <title>Just Build IT - Admin Painel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Gestão de obras e construção" name="keywords">
+    <meta content="Plataforma administrativa Just Build IT" name="description">
 
-    <!-- site icon -->
-    <link href="img/icon_nome.png" rel="icon">
+    <!-- Favicon -->
+    <link href="AA__images/icon_sem_nome-3.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +22,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="AA_lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="AA_lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="AA_css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="AA_css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,80 +37,81 @@
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"
+                aria-label="Carregando...">
+                <span class="visually-hidden">Carregando...</span>
             </div>
         </div>
+
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="adminPainel.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><img src="img/icon_sem_nome.png" alt="icon_navbar"
-                            style="width: 0px; height: 0px;"></i>Just Build It</h3>
+                <a href="AdminPainel.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2" aria-hidden="true"></i>Just Build IT</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="images/svg/person-account-circle-svgrepo-com.svg" alt="IconPrefil" style="width: 50px; height: 50px;">
+                        <img class="rounded-circle" src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                            alt="Foto do perfil do admin" style="width: 50px; height: 50px;">
                         <div
                             class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
                         </div>
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">adminTeste</h6>
-                        <span>Admin</span>
+                        <span class="badge bg-success">Admin</span>
                     </div>
                 </div>
-                <div class="navbar-nav w-100">
-                    <a href="adminPainel.html" class="nav-item nav-link active"><i
-                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <div class="navbar-nav w-100" role="navigation" aria-label="Navegação principal">
+                    <a href="AdminPainel.html" class="nav-item nav-link active" aria-current="page">
+                        <i class="fa fa-tachometer-alt me-2" aria-hidden="true"></i>Dashboard
+                    </a>
+                    <a href="Obras_tds.html" class="nav-item nav-link">
+                        <i class="fa fa-th me-2" aria-hidden="true"></i>Obras
+                    </a>
+                    <a href="Relatorios_todos.html" class="nav-item nav-link">
+                        <i class="fa fa-keyboard me-2" aria-hidden="true"></i>Relatórios
+                    </a>
+                    <a href="Pedidos.html" class="nav-item nav-link">
+                        <i class="fa fa-table me-2" aria-hidden="true"></i>Pedidos
+                    </a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                                class="fa fa-laptop me-2"></i>Elements</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="far fa-file-alt me-2" aria-hidden="true"></i>Utilizadores
+                        </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">Buttons</a>
-                            <a href="typography.html" class="dropdown-item">Typography</a>
-                            <a href="element.html" class="dropdown-item">Other Elements</a>
-                        </div>
-                    </div>
-                    <a href="Obras.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Obras</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-                                class="far fa-file-alt me-2"></i>Utilizadores</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
                             <a href="signup.html" class="dropdown-item">Criar Conta</a>
                             <a href="utilizadores_table.html" class="dropdown-item">Tabela de Utilizadores</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
+
         <!-- Content Start -->
         <div class="content">
-            <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
-                <a href="adminPainel.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+            <!-- Navbar superior -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0"
+                aria-label="Navegação superior">
+                <a href="AdminPainel.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit" aria-hidden="true"></i></h2>
                 </a>
-                <a href="#" class="sidebar-toggler flex-shrink-0">
+                <a href="#" class="sidebar-toggler flex-shrink-0" aria-label="Toggle sidebar">
                     <i class="fa fa-bars"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
-                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Pesquisar"
+                        aria-label="Pesquisar">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell me-lg-2" aria-hidden="true"></i>
                             <span class="d-none d-lg-inline-flex">Notificações</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Pedido material</h6>
+                                <h6 class="fw-normal mb-0">Pedido de material</h6>
                                 <small>1 min atrás</small>
                             </a>
                             <hr class="dropdown-divider">
@@ -120,336 +121,237 @@
                             </a>
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Cliente adicionado a obra</h6>
+                                <h6 class="fw-normal mb-0">Cliente adicionado à obra</h6>
                                 <small>25 minutos atrás</small>
                             </a>
                             <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                            <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="images/svg/person-account-circle-svgrepo-com.svg" alt=""
-                                style="width: 40px; height: 40px;">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="rounded-circle me-lg-2"
+                                src="AA__images/svg/person-account-circle-svgrepo-com.svg"
+                                alt="Foto do perfil adminTeste" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">adminTeste</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="index.html" class="dropdown-item">Log Out</a>
-                            <!-- aqui tem o log out para a pagina inicial -->
+                            <a href="#" class="dropdown-item">Meu Perfil</a>
+                            <a href="#" class="dropdown-item">Definições</a>
+                            <a href="index.html" class="dropdown-item">Sair</a>
                         </div>
                     </div>
                 </div>
             </nav>
-            <!-- Navbar End -->
 
+            <main role="main">
+                <!-- Estatísticas do Dashboard -->
+                <section class="container-fluid pt-4 px-4" aria-labelledby="dashboard-stats">
+                    <h2 id="dashboard-stats" class="visually-hidden">Estatísticas do Dashboard</h2>
+                    <div class="row g-3">
 
-            <!-- Tabela das Obras -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded h-100 p-4 text-center">
+                                <i class="fa fa-chart-line fa-3x text-primary mb-3"></i>
                                 <p class="mb-2">Obras existentes</p>
-                                <h6 class="mb-0">1000</h6>
+                                <h3 class="mb-0">128</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded h-100 p-4 text-center">
+                                <i class="fa fa-chart-bar fa-3x text-primary mb-3"></i>
                                 <p class="mb-2">Obras em orçamento</p>
-                                <h6 class="mb-0">345</h6>
+                                <h3 class="mb-0">27</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">total do orçamento do m</p>
-                                <h6 class="mb-0">$997354</h6>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded h-100 p-4 text-center">
+                                <i class="fa fa-chart-area fa-3x text-primary mb-3"></i>
+                                <p class="mb-2">Total do orçamento</p>
+                                <h3 class="mb-0">€184.500</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total do ano </p>
-                                <h6 class="mb-0">$3202719048</h6>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary rounded h-100 p-4 text-center">
+                                <i class="fa fa-chart-pie fa-3x text-primary mb-3"></i>
+                                <p class="mb-2">Total do ano</p>
+                                <h3 class="mb-0">€1.920.300</h3>
                             </div>
                         </div>
+
                     </div>
-                </div>
-            </div>
-            <!-- Sale & Revenue End -->
+                </section>
 
-
-            <!-- Grafico e Mapa -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Total de todas as obras</h6>
-                                <a href="">Mostrar Tudo</a>
+                <!-- Gráficos e Mapa -->
+                <section class="container-fluid pt-4 px-4" aria-labelledby="dashboard-charts">
+                    <h2 id="dashboard-charts" class="visually-hidden">Gráficos e Mapa</h2>
+                    <div class="row g-4">
+                        <article class="col-12 col-md-6">
+                            <div class="bg-secondary text-center rounded p-4 h-100 d-flex flex-column">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">Total de todas as obras</h6>
+                                    <a href="#" aria-label="Ver todas as obras">Ver todas</a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <canvas id="worldwide-sales" class="w-100 h-100"
+                                        aria-label="Gráfico de vendas mundiais"></canvas>
+                                </div>
                             </div>
-                            <canvas id="worldwide-sales"></canvas>
+                        </article>
+                        <article class="col-12 col-md-6">
+                            <div class="bg-secondary text-center rounded p-4 h-100 d-flex flex-column">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">Mapa</h6>
+                                    <a href="#" aria-label="Ver mapa completo">Ver todas</a>
+                                </div>
+                                <div class="map-container flex-grow-1">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d8791.341828932376!2d-9.16959508656777!3d38.827680710046636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sescola%20secundaria%20jose%20afonso!5e0!3m2!1spt-PT!2spt!4v1773690509180!5m2!1spt-PT!2spt"
+                                        style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        title="Mapa da localização da escola">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tabela de Obras -->
+                <section class="container-fluid pt-4 px-4" aria-labelledby="works-table">
+                    <h2 id="works-table" class="visually-hidden">Lista de Obras</h2>
+                    <div class="bg-secondary text-center rounded p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="mb-0">Todas as Obras</h3>
+                            <a href="#" aria-label="Ver todas as obras">Ver todas</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th scope="col">Código da Obra</th>
+                                        <th scope="col">Data de Início</th>
+                                        <th scope="col">Data Prevista</th>
+                                        <th scope="col">Orçamento</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>OBR-2026-001</td>
+                                        <td>15 Jan 2026</td>
+                                        <td>30 Jun 2026</td>
+                                        <td>€185.000</td>
+                                        <td><span class="badge bg-warning">Em andamento</span></td>
+                                        <td><a class="btn btn-sm btn-primary" href="Obras.html"
+                                                aria-label="Ver detalhes da obra OBR-2026-001">Detalhes</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>OBR-2026-002</td>
+                                        <td>01 Fev 2026</td>
+                                        <td>15 Set 2026</td>
+                                        <td>€320.000</td>
+                                        <td><span class="badge bg-success">Concluída</span></td>
+                                        <td><a class="btn btn-sm btn-primary" href="Obras.html"
+                                                aria-label="Ver detalhes da obra OBR-2026-002">Detalhes</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                </section>
 
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Mapa</h6>
-                                <a href="">Mostrar Tudo</a>
+                <!-- Widgets -->
+                <section class="container-fluid pt-4 px-4" aria-labelledby="widgets-section">
+                    <h2 id="widgets-section" class="visually-hidden">Widgets Administrativos</h2>
+                    <div class="row g-4">
+                        <!-- Relatórios -->
+                        <article class="col-sm-12 col-md-6 col-xl-4">
+                            <div class="h-100 bg-secondary rounded p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <h6 class="mb-0">Relatórios</h6>
+                                    <a href="#" aria-label="Ver todos os relatórios">Ver todos</a>
+                                </div>
+                                <div class="d-flex align-items-center border-bottom py-3">
+                                    <img class="rounded-circle flex-shrink-0" src="AA__images/user.jpg"
+                                        alt="Foto de Miguel" style="width: 40px; height: 40px;" loading="lazy">
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-0">Miguel</h6>
+                                            <small>15 minutos atrás</small>
+                                        </div>
+                                        <span>Rua Exemplo 123</span>
+                                    </div>
+                                </div>
+                                <!-- Mais itens... -->
                             </div>
-
-                            <div class="map-container">
-                                <img src="img/Portugal_location_map_(wide).svg" alt="Mapa"
-                                    style="width: 52%; height: auto;">
+                        </article>
+                        <!-- Calendário -->
+                        <article class="col-sm-12 col-md-6 col-xl-4">
+                            <div class="h-100 bg-secondary rounded p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">Calendário</h6>
+                                    <a href="#" aria-label="Ver calendário completo">Ver todos</a>
+                                </div>
+                                <div id="calender" aria-label="Calendário de eventos"></div>
                             </div>
-
-                        </div>
+                        </article>
+                        <!-- Pedidos -->
+                        <article class="col-sm-12 col-md-6 col-xl-4">
+                            <div class="h-100 bg-secondary rounded p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">Pedidos Ativos</h6>
+                                    <a href="#" aria-label="Ver todos os pedidos">Ver todos</a>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <input class="form-control bg-dark border-0" type="text"
+                                        placeholder="Adicionar Material" aria-label="Pesquisar materiais">
+                                    <button type="button" class="btn btn-primary ms-2"
+                                        aria-label="Adicionar material">Adicionar</button>
+                                </div>
+                                <!-- Lista de pedidos... -->
+                            </div>
+                        </article>
                     </div>
-
-                </div>
-            </div>
-            <!-- Sales Chart End -->
-
-
-            <!-- Tabela das obras -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Todas as Obras</h6>
-                        <a href="">Mostrar Todas</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col">Código da Obra</th>
-                                    <th scope="col">Data de Inicio</th>
-                                    <th scope="col">Data Prevista</th>
-                                    <th scope="col">Orçamento</th>
-                                    <th scope="col">Estado</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>OBR-2026-001</td>
-                                    <td>15 Jan 2026</td>
-                                    <td>30 Jun 2026</td>
-                                    <td>€ 185.000</td>
-                                    <td>Em andamento</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalhes</a></td>
-                                </tr>
-                                <tr>
-                                    <td>OBR-2026-002</td>
-                                    <td>01 Fev 2026</td>
-                                    <td>15 Set 2026</td>
-                                    <td>€ 320.000</td>
-                                    <td>Concluída</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalhes</a></td>
-                                </tr>
-                                <tr>
-                                    <td>OBR-2025-014</td>
-                                    <td>10 Out 2025</td>
-                                    <td>20 Mar 2026</td>
-                                    <td>€ 97.500</td>
-                                    <td>Em atraso</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalhes</a></td>
-                                </tr>
-                                <tr>
-                                    <td>OBR-2025-009</td>
-                                    <td>05 Jul 2025</td>
-                                    <td>20 Dez 2025</td>
-                                    <td>€ 540.000</td>
-                                    <td>Concluída</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalhes</a></td>
-                                </tr>
-                                <tr>
-                                    <td>OBR-2026-003</td>
-                                    <td>20 Mar 2026</td>
-                                    <td>30 Nov 2026</td>
-                                    <td>€ 1.250.000</td>
-                                    <td>Em andamento</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalhes</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- Recent Sales End -->
-
-
-            <!-- Widgets Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="mb-0">Relatorios</h6>
-                                <a href="">Mostrar Tudo</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
-                                    style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Miguel</h6>
-                                        <small>15 minutos atrás</small>
-                                    </div>
-                                    <span>Morada</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
-                                    style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>25 minutos atrás</small>
-                                    </div>
-                                    <span>Morada</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt=""
-                                    style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">João</h6>
-                                        <small>50 minutos atrás</small>
-                                    </div>
-                                    <span>Morada</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-3">
-                                <img class="rounded-circle flex-shrink-0" src="images/svg/person-account-circle-svgrepo-com.svg" alt=""
-                                    style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">gerbásio</h6>
-                                        <small>2 Horas atrás</small>
-                                    </div>
-                                    <span>Morada</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Mostrar Tudo</a>
-                            </div>
-                            <div id="calender"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Lista do Material Pedido</h6>
-                                <a href="">Mostrar Tudo</a>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <input class="form-control bg-dark border-0" type="text"
-                                    placeholder="Adicionar Material">
-                                <button type="button" class="btn btn-primary ms-2">Adicionar</button>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Cimento</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Areia</span>
-                                        <button class="btn btn-sm"><i class="fa f   a-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <!-- cheked muda se ta com o cheked ja default-->
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Tijolo</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Vigas de Ferro</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Betão</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Widgets End -->
-
-
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Just Build It</a>, All Right Reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
+                </section>
+            </main>
         </div>
-        <!-- Content End -->
-
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Voltar ao topo">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+        </a>
     </div>
 
-    <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries (defer non-critical) -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="AA_lib/chart/chart.min.js" defer></script>
+    <script src="AA_lib/easing/easing.min.js" defer></script>
+    <script src="AA_lib/waypoints/waypoints.min.js" defer></script>
+    <script src="AA_lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="AA_lib/tempusdominus/js/moment.min.js" defer></script>
+    <script src="AA_lib/tempusdominus/js/moment-timezone.min.js" defer></script>
+    <script src="AA_lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" defer></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="AA_js/main.js" defer></script>
+
+    <script>
+        // Remove spinner after load
+        window.addEventListener('load', () => {
+            document.getElementById('spinner').classList.remove('show');
+        });
+
+        // Sidebar toggle
+        document.querySelector('.sidebar-toggler').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+        });
+    </script>
 </body>
 
 </html>

@@ -289,83 +289,179 @@
 }
 
 .hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+    \n position: relative;
+    \n width: 100%;
+    \n height: 100vh;
+    \n overflow: hidden;
+    \n
 }
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
+\n\n.hero-video {
+    \n position: absolute;
+    \n top: 50%;
+    \n left: 50%;
+    \n width: auto;
+    \n height: 100%;
+    \n min-width: 100%;
+    \n min-height: 100%;
+    \n transform: translate(-50%, -50%);
+    \n object-fit: cover;
+    \n z-index: 0;
+    \n
 }
 
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+\n\n.hero-overlay {
+    \n position: absolute;
+    \n top: 0;
+    \n left: 0;
+    \n width: 50%;
+    \n
+    /* largura do quadrado */
+    \n height: 100%;
+    \n background: rgba(0, 0, 0, 0.6);
+    \n
+    /* quadrado escuro */
+    \n z-index: 1;
+    \n
 }
 
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+\n\n.hero-text {
+    \n position: absolute;
+    \n top: 50%;
+    \n left: 5%;
+    \n
+    /* distância da borda esquerda */
+    \n transform: translateY(-50%);
+    \n z-index: 2;
+    \n color: #fff;
+    \n max-width: 400px;
+    \n
 }
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%; /* largura do quadrado */
-  height: 100%;
-  background: rgba(0,0,0,0.6); /* quadrado escuro */
-  z-index: 1;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 5%; /* distância da borda esquerda */
-  transform: translateY(-50%);
-  z-index: 2;
-  color: #fff;
-  max-width: 400px;
-}
-
-.hero-buttons {
-  margin-top: 20px;
+\n .hero-buttons {
+    margin-top: 20px;
 }
 
 .hero-buttons .btn {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
-.hero-slides{
+.hero-slides {
     width: 100%;
     height: 100%;
-    position:important
-    ;
+    position: important;
+}
+
+
+
+.card-equal {
+    min-height: 120px;
+    height: 100%;
+}
+
+.box-equal {
+    min-height: 354px;
+
+    height: 100%;
+}
+
+.map-container {
+    height: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.chart-equal {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.row.g-4>.col-sm-6.col-xl-3 {
+    display: flex;
+}
+
+.row.g-4>.col-sm-6.col-xl-3>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 150px;
+    /* ajusta conforme precisar */
+    text-align: center;
+}
+
+.users-page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+#accordionUsers .accordion-item {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#accordionUsers .accordion-button {
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+#accordionUsers .accordion-button:not(.collapsed) {
+    background: rgba(0, 123, 255, 0.2);
+    color: #fff;
+}
+
+#accordionUsers .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+#accordionUsers .accordion-body {
+    padding: 1.25rem;
+}
+
+.users-table-wrap {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.users-table-wrap .table {
+    margin-bottom: 0;
+}
+
+.users-table-wrap .table thead th {
+    background: rgba(0, 123, 255, 0.3);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.9rem 1rem;
+    border: none;
+    white-space: nowrap;
+}
+
+.users-table-wrap .table tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+}
+
+.users-table-wrap .table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.badge-cargo {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    font-weight: 500;
+}
+
+.content .px-4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }

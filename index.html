@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" href="images/icon_sem_nome.png">
+    <link rel="icon" type="image/png" href="AA__images/icon_sem_nome-3.ico">
     <title>Just Build IT</title>
 
     <!-- CSS FILES -->
@@ -15,10 +15,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap"
         rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/vegas.min.css" rel="stylesheet">
-    <link href="css/tooplate-barista.css" rel="stylesheet">
+    <link href="AA_css/bootstrap.min.css" rel="stylesheet">
+    <link href="AA_css/bootstrap-icons.css" rel="stylesheet">
+    <link href="AA_css/vegas.min.css" rel="stylesheet">
+    <link href="AA_css/tooplate-barista.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="images/imagem_bugada_1.png" class="navbar-brand-image img-fluid" alt="icon_nome">
+                    <img src="AA__images/imagem_bugada_1.png" class="navbar-brand-image img-fluid" alt="logo">
                     Just Build IT
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -43,8 +45,12 @@
                                 data-pt="Sobre nos"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3" data-en="Language"
-                                data-pt="Linguagens"></a>
+                            <a class="nav-link click-scroll" href="#section_3" data-en="Functionalities"
+                                data-pt="Funcionalidades"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2" data-en="Language/Software"
+                                data-pt="Linguagens/Software"></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4" data-en="Contact"
@@ -59,9 +65,9 @@
                         </a>
 
                         <!-- LANGUAGE SWITCH -->
-                        <img src="images/english_flag.png" id="btnEN" class="me-2" alt="English" title="English"
+                        <img src="AA__images/english_flag.png" id="btnEN" class="me-2" alt="English" title="English"
                             style="cursor:pointer; width:30px;">
-                        <img src="images/portugal_flag.png" id="btnPT" alt="Português" title="Português"
+                        <img src="AA__images/portugal_flag.png" id="btnPT" alt="Português" title="Português"
                             style="cursor:pointer; width:30px;">
                     </div>
                 </div>
@@ -88,7 +94,7 @@
             </div>
             <div class="hero-slides">
                 <video autoplay loop muted class="custom-video">
-                    <source src="vidios/mainlobbyvidio.mp4" type="video/mp4">
+                    <source src="AA__images/vidios/mainlobbyvidio.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -102,7 +108,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="ratio ratio-1x1">
                             <video autoplay loop muted class="custom-video">
-                                <source src="vidios/mainlobbyvidio.mp4" type="video/mp4">
+                                <source src="AA__images/vidios/mainlobbyvidio.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="about-video-info d-flex flex-column">
@@ -129,7 +135,9 @@
                 <div class="row align-items-center">
                     <h1 class="text-white text-center mt-5 mb-4" data-en="Functionalities" data-pt="Funcionalidades">
                     </h1>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                </div>
+                <div class="functionalities-grid">
+                    <div>
                         <div class="card mx-auto text-white"
                             style="width: 25rem; background-color: var(--card_color_custm);">
                             <div class="card-body">
@@ -137,8 +145,9 @@
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images/svg/blueprint-svgrepo-com.svg" alt="Project Management"
+                                        <img src="AA__images/svg/blueprint-svgrepo-com.svg" alt="Project Management"
                                             class="img-fluid" width="100">
+
                                     </div>
 
                                     <!-- Texto -->
@@ -178,20 +187,19 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card mx-auto text-white"
-                            style="width: 25rem; background-color: var(--card_color_custm);">
+                    <div>
+                        <div class="card mx-auto text-white" style="background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images\svg\user-round-cog.svg" alt="Project Management"
+                                        <img src="AA__images/svg/user-round-cog.svg" alt="Project Management"
                                             class="img-fluid" width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7" style="min-height: 150px;">
+                                    <div class="col-7">
                                         <h5 class="card-title text mb-0" data-en="Account Management"
                                             data-pt="Gestão de Contas">
 
@@ -228,20 +236,19 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card mx-auto text-white"
-                            style="width: 25rem; background-color: var(--card_color_custm);">
+                    <div>
+                        <div class="card mx-auto text-white" style="background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images/svg/list-check-svgrepo-com.svg" alt="Project Management"
+                                        <img src="AA__images/svg/list-check-svgrepo-com.svg" alt="Project Management"
                                             class="img-fluid" width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-6" style="min-height: 150px;">
+                                    <div class="col-6">
                                         <h5 class="card-title mb-0" data-en="Work planning"
                                             data-pt="Planeamento de obras">
 
@@ -270,20 +277,19 @@
                     </div>
 
                     <!-- Cards de baixo -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                        <div class="card mx-auto text-white mt-1"
-                            style="width: 25rem; background-color: var(--card_color_custm);">
+                    <div>
+                        <div class="card mx-auto text-white" style="background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images\svg\graph-up.svg" alt="Project Management" class="img-fluid"
-                                            width="100">
+                                        <img src="AA__images/svg/graph-up.svg" alt="Project Management"
+                                            class="img-fluid" width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7" style="min-height: 150px;">
+                                    <div class="col-7">
                                         <h5 class="card-title mb-0" data-en="Financing and Reporting"
                                             data-pt="Financiamento e Relatórios">
                                         </h5>
@@ -315,20 +321,19 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-                        <div class="card mx-auto text-white mt-1"
-                            style="width: 25rem; background-color: var(--card_color_custm);">
+                    <div>
+                        <div class="card mx-auto text-white" style="background-color: var(--card_color_custm);">
                             <div class="card-body">
                                 <div class="row align-items-center">
 
                                     <!-- Imagem -->
                                     <div class="col-5 text-center">
-                                        <img src="images\svg\document-duplicate.svg" alt="Project Management"
+                                        <img src="AA__images/svg/document-duplicate.svg" alt="Project Management"
                                             class="img-fluid" width="100">
                                     </div>
 
                                     <!-- Texto -->
-                                    <div class="col-7" style="min-height: 150px;">
+                                    <div class="col-7">
                                         <h5 class="card-title mb-0" data-en="Document Conversion"
                                             data-pt="Conversão de Documentos">
                                         </h5>
@@ -373,7 +378,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="team-member-card text-center">
                             <div class="team-member-avatar">
-                                <img src="images/hard_foto.png" alt="Rodrigo Lourenço" class="img-fluid">
+                                <img src="AA__images/hard_foto.png" alt="Rodrigo Lourenço" class="img-fluid">
                             </div>
                             <h4 class="team-member-name mt-3 text-white" data-en="Rodrigo Lourenço"
                                 data-pt="Rodrigo Lourenço"></h4>
@@ -386,7 +391,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="team-member-card text-center">
                             <div class="team-member-avatar">
-                                <img src="images/tiago_foto.jpg" alt="Tiago Vaz" class="img-fluid">
+                                <img src="AA__images/tiago_foto.jpg" alt="Tiago Vaz" class="img-fluid">
                             </div>
                             <h4 class="team-member-name mt-3 text-white" data-en="Tiago Vaz" data-pt="Tiago Vaz">
                             </h4>
@@ -400,12 +405,13 @@
 
         <!-- Linguagens -->
         <section class="barista-section section-padding section-bg" id="section_3">
+
             <div class="container">
                 <h2 class="text-black text-center mb-4" data-en="Language" data-pt="Linguagens"></h2>
                 <div class="row justify-content-center g-4">
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/java-svgrepo-com.svg" alt="Java" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/java-svgrepo-com.svg" alt="Java" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Java</h5>
@@ -414,7 +420,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/sql-svgrepo-com.svg" alt="MySQL" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/sql-svgrepo-com.svg" alt="MySQL" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">SQL</h5>
@@ -423,7 +429,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/javascript-16-svgrepo-com.svg" alt="JavaScript"
+                            <div class="pt-3"> <img src="AA__images/svg/javascript-16-svgrepo-com.svg" alt="JavaScript"
                                     width="120" height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">JavaScript</h5>
@@ -432,7 +438,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/html5-01-svgrepo-com.svg" alt="HTML" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/html5-01-svgrepo-com.svg" alt="HTML" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">HTML</h5>
@@ -441,7 +447,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/css3-01-svgrepo-com.svg" alt="CSS" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/css3-01-svgrepo-com.svg" alt="CSS" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">CSS</h5>
@@ -450,7 +456,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/php-svgrepo-com.svg" alt="PHP" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/php-svgrepo-com.svg" alt="PHP" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">PHP</h5>
@@ -459,7 +465,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/xml-svgrepo-com.svg" alt="Node.js" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/xml-svgrepo-com.svg" alt="Node.js" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Xml</h5>
@@ -468,14 +474,15 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- apps que usamos -->
+        </section>
+        <!-- apps que usamos -->
         <section class="barista-section section-padding section-bg" id="section_3">
             <div class="container">
                 <h2 class="text-black text-center mb-4" data-en="Software Used" data-pt="Software utilizados"></h2>
                 <div class="row justify-content-center g-4">
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/github-142-svgrepo-com.svg" alt="Git Hub"
+                            <div class="pt-3"> <img src="AA__images/svg/github-142-svgrepo-com.svg" alt="Git Hub"
                                     width="120" height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Git Hub</h5>
@@ -484,7 +491,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/git-svgrepo-com.svg" alt="Git" width="120"
+                            <div class="pt-3"> <img src="AA__images/svg/git-svgrepo-com.svg" alt="Git" width="120"
                                     height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Git</h5>
@@ -493,8 +500,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/laragon-svgrepo-com.svg" alt="Laragon" width="120"
-                                    height="120"> </div>
+                            <div class="pt-3"> <img src="AA__images/svg/laragon-svgrepo-com.svg" alt="Laragon"
+                                    width="120" height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Laragon</h5>
                             </div>
@@ -502,7 +509,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/vs-code-logo-microsoft-svgrepo-com.svg"
+                            <div class="pt-3"> <img src="AA__images/svg/vs-code-logo-microsoft-svgrepo-com.svg"
                                     alt="Vs Code" width="120" height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">Vs Code</h5>
@@ -511,7 +518,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/android-svgrepo-com.svg" alt="Android Studio"
+                            <div class="pt-3"> <img src="AA__images/svg/android-svgrepo-com.svg" alt="Android Studio"
                                     width="120" height="120"> </div>
                             <div class="card-body">
                                 <h5 class="card-title">android Studio</h5>
@@ -520,7 +527,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card text-center mx-auto" style="width: 18rem; border-radius: 45px 0 45px 0;">
-                            <div class="pt-3"> <img src="images/svg/DBeaver.svg" alt="DBeaver" width="120" height="120">
+                            <div class="pt-3"> <img src="AA__images/svg/DBeaver.svg" alt="DBeaver" width="120"
+                                    height="120">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">DBeaver</h5>
@@ -559,26 +567,15 @@
                 </div>
             </div>
         </section>
-
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <p data-en="Copyright © 2025 JustBuildIt" data-pt="Direitos autorais © 2025 capyland"></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
     <!-- JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/vegas.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="AA_js/jquery.min.js"></script>
+    <script src="AA_js/bootstrap.min.js"></script>
+    <script src="AA_js/jquery.sticky.js"></script>
+    <script src="AA_js/click-scroll.js"></script>
+    <script src="AA_js/vegas.min.js"></script>
+    <script src="AA_js/custom.js"></script>
 
     <!-- LANGUAGE SWITCH -->
     <script>

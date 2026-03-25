@@ -1,112 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-PT">
 <head>
     <meta charset="utf-8">
-    <title>Just Build It - Login</title>
+    <title>Just Build IT - Login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Login administrativo Just Build IT" name="keywords">
+    <meta content="Aceda à plataforma de gestão de obras" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="AA__images/icon_nome.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap Stylesheet -->
+    <link href="AA_css/bootstrap.min.css" rel="stylesheet">
+    <link href="AA_css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="visually-hidden">Carregando...</span>
             </div>
         </div>
-        <!-- Spinner End -->
 
+        <!-- Sign In Form -->
+        <main class="container-fluid d-flex align-items-center justify-content-center min-vh-100 py-5" role="main">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <form onsubmit="login(event)" class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3" novalidate>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h3 class="text-primary m-0"><i class="fa fa-user-edit me-2" aria-hidden="true"></i>Just Build IT</h3>
+                        </a>
+                        <h2 class="m-0">Iniciar Sessão</h2>
+                    </div>
 
-        <!-- Sign In Start -->
-        <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <form onsubmit="login(event)" class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Just Build IT</h3>
-                            </a>
-                            <h3>Sign In</h3>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingemail" placeholder="name@example.com">
-                            <label for="floatingemail">Email address</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <a href="">Forgot Password</a>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingemail" placeholder="email@exemplo.com" required aria-describedby="emailHelp">
+                        <label for="floatingemail">Endereço de email</label>
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
 
-                        <div id="mensagem" class="text-danger mb-3"></div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
-                    </form>
-                </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" required minlength="4">
+                        <label for="floatingPassword">Palavra-passe</label>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember">
+                            <label class="form-check-label text-light" for="remember">
+                                Lembrar-me
+                            </label>
+                        </div>
+                        <a href="#" class="text-decoration-none">Esqueceu a palavra-passe?</a>
+                    </div>
+
+                    <div id="mensagem" class="alert" role="alert" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-3 fw-semibold">Iniciar Sessão</button>
+                    
+                </form>
             </div>
-        </div>
-        <!-- Sign In End -->
+        </main>
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
+    <!-- JavaScript -->
+    <script src="AA_js/main.js" defer></script>
     <script>
+        // Auto-hide spinner
+        window.addEventListener('load', () => {
+            document.getElementById('spinner').classList.remove('show');
+        });
+
         function login(event) {
-            event.preventDefault(); // impede recarregar a página
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const email = document.getElementById('floatingemail').value;
+            const senha = document.getElementById('floatingPassword').value;
+            const mensagem = document.getElementById('mensagem');
+            
+            // Clear previous messages
+            mensagem.style.display = 'none';
+            mensagem.className = 'alert';
 
-            const email = document.getElementById("floatingemail").value;
-            const senha = document.getElementById("floatingPassword").value;
-            const mensagem = document.getElementById("mensagem");
-
-            if (email === "admin@justbuildit.com" && senha === "1234") {
-                alert("Login bem-sucedido!");
-                window.location.href = "adminPainel.html";
+            // Demo credentials
+            if (email === 'admin@justbuildit.com' && senha === '1234') {
+                // Simulate session storage
+                sessionStorage.setItem('user', JSON.stringify({email, role: 'admin'}));
+                window.location.href = 'AdminPainel.html';
             } else {
-                mensagem.textContent = "Email ou senha incorretos!";
+                mensagem.textContent = 'Email ou palavra-passe incorretos!';
+                mensagem.className = 'alert alert-danger';
+                mensagem.style.display = 'block';
+                mensagem.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', (e) => {
+            const email = document.getElementById('floatingemail');
+            const senha = document.getElementById('floatingPassword');
+            
+            if (!email.value.includes('@')) {
+                e.preventDefault();
+                email.classList.add('is-invalid');
+                return false;
+            }
+            
+            if (senha.value.length < 4) {
+                e.preventDefault();
+                senha.classList.add('is-invalid');
+                return false;
+            }
+        });
     </script>
-
 </body>
-
 </html>
